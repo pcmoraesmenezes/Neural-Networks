@@ -7,6 +7,7 @@ The idea behind this repository is to serve as a hub for all my accumulated stud
 ## Table of Contents 📖
 
 - [Courses](/Courses/README.md)
+- [Books](/Books/README.md)
   
 ## Additional Information ℹ️
 
