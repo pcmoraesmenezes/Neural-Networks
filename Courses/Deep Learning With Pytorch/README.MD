@@ -28,6 +28,9 @@ I divided the course into projects, and each project has it own porpuse. The top
 
 - [Project 7 - Grid Search + Parameter Tuning + DropOut in Iris dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_7.ipynb)
 
+### Regression 🎯
+
+- [Project 8 - Regression with car price dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_8.ipynb)
 ---
 
 ## Additional Information ℹ️
