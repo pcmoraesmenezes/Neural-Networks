@@ -96,3 +96,78 @@ One of the biggest disadvantages of neural networks is the fact that many types 
 
 6. The XOR problem is a problem that a perceptron with a single layer cannot solve. The perceptron is limited to solving linear problems, and the XOR problem is a non-linear problem. The XOR problem is a problem that requires a multi-layer perceptron to solve.
 
+## Chapter 2 - Neurocomputing Principles
+
+Neurocomputing is based on the principles of biological neural networks. Understanding the process about how the brain works is essential to understand how artificial neural networks work. 
+
+### Neurons
+
+Human brain has a lot of neurons, and each neuron can create synapse with a lot of others neurons. If we consider an connection as a binary bit (0 or 1), we can say that we has a $X = x*y$ Where:
+
+- $X$ Memory capacity
+
+- $x$ Number of neurons
+
+- $y$ Number of synapses
+
+![Biological Neuron](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/1.png)
+
+The image above show us a biological neuron. The principals components in biological neurons are:
+
+- Dendrites: They are the input of the neuron. They receive the signals from other neurons.
+
+- Neuron Body: It's the processing unit of the neuron. It's responsible to process the signals received by the dendrites.
+
+- Axon: It's the output of the neuron. It's responsible to send the signals to other neurons.
+
+Eletrical signs are sent by the axon to the dendrites. To a sign be considered valid, it must be greather than aproximately $50mV$ in the neuron body. If the sign is lower than $50mV$, the neuron doesn't send the sign to the axon.
+
+The system is essentially considered as non linear. 
+
+Before the eletrical sign pass to the next neuron must pass by a synapse. Here the pass is made by chemical signs, and the sign must be greather than an threshold to pass to the next neuron. Each human brain network has it own threshold.
+
+A neuron receives signs from countless dendrites, and the neuron ponders it and sends it to the axon. It's valid to say that each passage has it own sign that can be amplified or not. Human brain has a lot of specialized functions, and each function is made by a specific network of neurons, which it's responsible to give weights to the signs.
+
+Weights are adjusted based on train received by brain during life.
+
+![Mathematical neuron representation](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/2.png)
+
+The image above show us a mathematical representation of a neuron. The input can be one or more signals, and the output is the result of the ponderation of the input signals. The ponderation is made by the weights. The output is the result of the ponderation of the input signals. The output is made by a only function, called activation function. The activation function can be linear or non-linear. The most common activation function is the sigmoid function. Those output can be a input to another neuron.
+
+Input signs came simultaneously to the neuron, and it's because that the neuron is considered a parallel processing unit.
+
+Dendrites and axons are mathematical represented by the synapses and weights. The weight is represented by $w$, and the input signal is represented by $x$. When we have a input, $x$, and a weight, $w$, the output is $y = w*x$. The output is the result of the ponderation of the input signal.
+
+$w_{1}x_{1},  w_{2}x_{2}, w_{3}x_{3} , ... ,w_{n}x_{n}$
+
+The neuron, however make a sum of those ponderations, and the output is the result of the sum of the ponderations. The output is represented by $v = \sum_{i=0}^{n} w_{i}x_{i}$
+
+This function is called as combination function or activation function.
+
+This value $v$ is passed to an transfer function, which is responsible to avoid the progressive increase. Those functions has it own maximum and minimum value.
+
+A perceptron with two layers with a non linear transfer function (sigmoid) can solve any problem.
+
+We can see that in a mathematical neuron model, the neuron is statistical, so it doesn't consider the natural neuron dynamics.
+
+Dealing with a network tha has more than one layer we adjust weights using the gradient descent algorithm. The gradient descent algorithm is responsible to adjust the weights to minimize the error and find the minimum value of the error. Thanks to the derivative process, if the transfer function had a constant value, the derivative would not find any information in the search for the best value.
+
+Some of the most common transfer functions are:
+
+- Sigmoid function: $\phi(x) = \frac{1}{1 + e^{-v}}$
+
+- Gaussian function: $\phi(x) = e^{-v^{2}}$
+
+- Hyperbolic tangent function: $\phi(x) = \frac{e^{v} - e^{-v}}{e^{v} + e^{-v}}$ or $\phi(x) = tanh(v)$
+
+We also can use a bias in the neuron. The bias is a constant value that is added to the ponderation. The bias is represented by $b$. The output is represented by $y = w*x + b$. Thanks to the bias, we can adjust the ponderation to the left or to the right. Without the bias, the function could be a zero and the problem or $XOR$ could not be solved.
+
+### Neural Networks
+
+By combining the neurons with one or more layers and the synapses we can create a Artificial Neural Network (ANN). 
+
+![Artificial Neural Networks](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/3.png)
+
+The image above show us an ANN. We can find an input layer, which is the first layer of the network, and receives the input signals. The input layer is connected to the hidden layer, which is responsible to guarantee non linear ponderation. The hidden layer is connected to another hidden layer or to the output layer. The output layer is responsible to give the final output of the network.
+
+By adjusting weights the network can learn (memorize) the input data patterns.
