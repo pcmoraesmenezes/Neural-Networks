@@ -171,3 +171,63 @@ By combining the neurons with one or more layers and the synapses we can create 
 The image above show us an ANN. We can find an input layer, which is the first layer of the network, and receives the input signals. The input layer is connected to the hidden layer, which is responsible to guarantee non linear ponderation. The hidden layer is connected to another hidden layer or to the output layer. The output layer is responsible to give the final output of the network.
 
 By adjusting weights the network can learn (memorize) the input data patterns.
+
+### Network Structure
+
+The network structure of a neural network varies considerably, and the way the structure is arranged relates to the learning algorithm that will be used to train the network.
+
+When the network has all outputs connected to all inputs, we have a full connected network. If we have a output sign connected to a input sign, we have a feedforward network.
+
+The structure of a network is free, and the number of layers and neurons can be adjusted. The number of layers and neurons are defined by the problem that the network will solve.
+
+### Learning Process
+
+The learning process of a neural network can be supervised or unsupervised. In supervised learning, the network receives a set of labeled data, and the network adjusts the weights to minimize the error. In unsupervised learning, the network receives a set of unlabeled data, and the network adjusts the weights to find patterns in the data. The unsupervised learning splits the data in clusters.
+
+### Learning Algorithms
+
+The learning is made by a iterative process that adjusts the weights to minimize the error. The most common learning algorithms are:
+
+- Learning by correction: The network adjusts the weights to minimize the error.
+
+- Competitive learning: Kohonen's algorithm.
+
+- Learning bases in memory
+
+- Hebbian learning: The network adjusts the weights to maximize the correlation between the input and output.
+
+- Boltzmann learning:
+
+### Credit attribution problem
+
+Credit attribution problem refers to how the network can determines the contribution of each unity(neuron, synapse, layer, etc), of the network to the final output. This attribution is guided by the global error gradient.
+
+When we are dealing with a single layer network, the weight can be made directly. However, dealing with a multi layer network, the weight adjust must be more complex.
+
+### Exercises
+
+1. What are the differences between a biological neuron and a mathematical neuron?
+
+2. What are the differences between supervised and unsupervised learning?
+
+3. What is feedback?
+
+4. What is the principle of neurons functions based on Hebb's law?
+
+5. What are the principles algorithms of learning?
+
+6. What is, and for what is used a bias?
+
+### Answers
+
+1. A biological neuron is a cell that receives, processes, and transmits information through electrical and chemical signals. A mathematical neuron is a computational model that receives input signals, processes them, and produces an output signal. A biological neuron has dendrites, a neuron body, and an axon. A mathematical neuron has input signals, weights, a combination function, a transfer function, and an output signal.
+
+2. Supervised learning is a type of machine learning that involves training a model on a labeled dataset. The model learns to map input data to output data. Unsupervised learning is a type of machine learning that involves training a model on an unlabeled dataset. The model learns to find patterns in the data.
+
+3. Feedback is a process in which the output of a system is fed back as input to the system. Feedback can be positive or negative. Positive feedback amplifies the output of a system. Negative feedback stabilizes the output of a system.
+
+4. The principle of neurons functions based on Hebb's law is that neurons that fire together wire together. This means that when two neurons are activated at the same time, the connection between them is strengthened. However the two neurons must be in the same layer. If the neurons are in different layers, the connection between them is weakened.
+
+5. The principle algorithms of learning are learning by correction, competitive learning, learning based on memory, Hebbian learning, and Boltzmann learning.
+
+6. A bias is a constant value that is added to the weighted sum of the input signals in a neuron. The bias allows the neuron to adjust the weighted sum to the left or to the right. Without the bias, the weighted sum could be zero, and the network would not be able to solve the XOR problem.
