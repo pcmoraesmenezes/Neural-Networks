@@ -232,7 +232,7 @@ When we are dealing with a single layer network, the weight can be made directly
 
 6. A bias is a constant value that is added to the weighted sum of the input signals in a neuron. The bias allows the neuron to adjust the weighted sum to the left or to the right. Without the bias, the weighted sum could be zero, and the network would not be able to solve the XOR problem.
 
-## Neural Network Project
+## Chapter 3 - Neural Network Project
 
 As we saw the structure of a neural network is free, and the number of layers and neurons can be adjusted. The number of layers and neurons are defined by the problem that the network will solve. This is made by a projectist, which is responsible to define the network structure. To the projectist define the network structure, it must follow the steps below:
 
@@ -321,3 +321,63 @@ The system must be checked periodically and be maintained.
 5. The network is integrated with the application by creating an interface that allows the user to input data, sending the input data to the network, receiving the output data from the network, and displaying the output data to the user.
 
 6. The learning algorithm is chosen based on the problem that the network will solve. The learning algorithm must be able to adjust the weights to minimize the error.
+
+## Chapter 4 - Perceptron
+
+The Perceptron is the simplest neural network. It's a single layer network, and it's used to solve linear problems. The Perceptron is a feedforward network, and it's composed of a single layer of neurons. The Perceptron has a single input layer, a single output layer, and no hidden layers. The Perceptron is used to solve linear problems, and it's not capable of solving non-linear problems. The Perceptron is used to solve problems such as pattern recognition and data classification.The combination of perceptrons is called artificial neural network.
+
+### Perceptron Structure
+
+As metioned before, the perceptron has only a single layer. We can have multiple inputs and outputs. Those inputs are connected to the output by synapses. Each synapse has it own weight and can have a bias. Also all inputs are connected to a single neuron. Calling the inputs as $x$ that can be represented as $x_{1}, x_{2}, x_{3}, ..., x_{n}$, the weights as $w$ that can be represented as $w_{1}, w_{2}, w_{3}, ..., w_{n}$, and the bias as $b$, we can call the transfer function as $v = \sum_{i=1}^{n} w_{i}x_{i} + b$ which is the seighted sum of inputs plus the bias before introducing the activation function. Next we go to a activation function, which each problem has it own function. The most common activation function is the sigmoid function. The sigmoid function is represented as $\phi(x) = \frac{1}{1 + e^{-v}}$. The output of the perceptron is the result of the activation function. The output can be represented as $y = \phi(v)$.
+
+![Perceptron Structure](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/4.avif)
+
+The image above show us the structure of a perceptron. The inputs goes from the range of $x_{1}, x_{2}, x_{3}, ..., x_{n}$, and the weights goes from the range of $w_{1}, w_{2}, w_{3}, ..., w_{n}$. The output is the result of the activation function. The image show us a perceptron with a single output. However we can have $n$ outputs.
+
+### Perceptron Learning Algorithm 
+
+As we saw before, after adjusting the weights, the perceptron can give a desire output with a minimal error. The proccess of adjust weights is iterative and is done by a learning algorithm called **delta rule**. The processing used by this rule is called ADALINE (Adaptive Linear Neuron). 
+
+We initialize randomly the weights and the net sum is calculated. Based on that we compare the desire output with the real output. If the error is not aceptable, we adjust the weights. The weights are adjusted proportionally to the error and sign value.
+
+The delta rule is represented as:
+
+$w(i,j)_{T+1} = w(i,j)_{T} + nE(j)_{T}x(i)$. Where:
+
+- $w(i,j)_{T+1}$ is the new weight
+
+- $w(i,j)_{T}$ is the old weight
+
+- $n$ is the learning ratio
+
+- $E(j)_{T}$ is the error for the neuron $j$
+
+- $i$ is the index for the input
+
+- $j$ is the index for the neuron
+
+- $T$ is iteration
+
+- $x(i)$ is the input
+
+The error is calculated as $E(j) = d(j) - y(j)$. Where:
+
+- $E(j)$ is the error for the neuron $j$
+
+- $d(j)$ is the sign calculated by the network to the neuron $j$
+
+- $y(j)$ is the output calculated by the network to the neuron $j$
+
+So the error is given by the difference between the desire signal to the neuron j $(d(j))$ and the output signal calculated by the network $(y(j))$.
+
+The mean error for all neurons in output layer is calculated as $E = \frac{1}{n}\sum_{j=1}^{n} |E(j)|$. Where:
+
+- $E$ is the mean error
+
+- $n$ is the number of neurons in the output layer
+
+- $E(j)$ is the error for the neuron $j$
+
+The mean error for all training data is calculated as $E = \frac{1}{n}\sum_{i=1}^{n} |E(T)|$. Where:
+
+This value can be used to stop the training process.
