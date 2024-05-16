@@ -31,6 +31,11 @@ I divided the course into projects, and each project has it own porpuse. The top
 ### Regression 🎯
 
 - [Project 8 - Regression with car price dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_8.ipynb)
+
+- [Project 9 - Cross Validation to car price dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_9.ipynb)
+
+- [Project 10 - Grid Search + Parameter Tuning in car price dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_10.ipynb)
+
 ---
 
 ## Additional Information ℹ️
