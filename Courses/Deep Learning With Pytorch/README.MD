@@ -38,6 +38,10 @@ I divided the course into projects, and each project has it own porpuse. The top
 
 ---
 
+### Multiclass Regression 🎯
+
+- [Project 11 - Multiclass regression for video game sales](/Courses/Deep%20Learning%20With%20Pytorch/Project_11.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
