@@ -42,6 +42,39 @@ I divided the course into projects, and each project has it own porpuse. The top
 
 - [Project 11 - Multiclass regression for video game sales](/Courses/Deep%20Learning%20With%20Pytorch/Project_11.ipynb)
 
+### Convolutional Neural Networks 🎯
+
+Used for computer vision. Also is the reason why we can build self-driving cars. They are better than SVM.
+
+To better train this type o neural network we should extract the features from the images. Example: We want to predict if is or not homer simpson. We should extract the format of the face, the eyes, the mouth, etc. However in this step we should take care of extract the features that are general and not specific to the image.
+
+Dense neural netwoorks are not good for images because the time to train is too high. Imagine a 32x32 image. If we build a dense neural network we would have 3072 input neurons. This would be a lot of weights to train.
+
+#### Convolutional operator
+
+Process of add each image element to the respective neighboor. Weights are based on kernel. 
+
+The image is a matrix and the kernel is the other matrix.
+
+$$ (f*g)[n] = \sum_{m=-\infty}^{\infty} f[m]g[n-m] $$
+
+The kernel is the result of pre processing the image. The kernel is the filter.
+
+#### Pooling
+
+Pooling is the process of highlight features in the image. This process also reduces the image size.
+
+So basic the steps of a convolutional neural network are:
+
+Image -> feature detector -> feature map -> activation function -> Max pooling -> Flattening -> Full connection
+
+#### Flattening
+
+Flattening is the process of convert the matrix into a vector.
+
+
+
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
