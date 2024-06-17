@@ -73,7 +73,9 @@ Image -> feature detector -> feature map -> activation function -> Max pooling -
 Flattening is the process of convert the matrix into a vector.
 
 
+### Convolutional Neural Networks 🎯
 
+- [Project 12 - Convolutional Neural Network MNIST](/Courses/Deep%20Learning%20With%20Pytorch/Project_12.ipynb)
 
 ## Additional Information ℹ️
 
