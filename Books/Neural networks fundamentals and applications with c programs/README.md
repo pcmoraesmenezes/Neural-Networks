@@ -324,15 +324,15 @@ The system must be checked periodically and be maintained.
 
 ## Chapter 4 - Perceptron
 
-The Perceptron is the simplest neural network. It's a single layer network, and it's used to solve linear problems. The Perceptron is a feedforward network, and it's composed of a single layer of neurons. The Perceptron has a single input layer, a single output layer, and no hidden layers. The Perceptron is used to solve linear problems, and it's not capable of solving non-linear problems. The Perceptron is used to solve problems such as pattern recognition and data classification.The combination of perceptrons is called artificial neural network.
+The Perceptron is the simplest neural network. It's a single layer network, and it's used to solve linear problems. The Perceptron is a feedforward network, and it's composed of a single layer of neurons. The Perceptron is used to solve linear problems, and it's not capable of solving non-linear problems.
 
 ### Perceptron Structure
 
-As metioned before, the perceptron has only a single layer. We can have multiple inputs and outputs. Those inputs are connected to the output by synapses. Each synapse has it own weight and can have a bias. Also all inputs are connected to a single neuron. Calling the inputs as $x$ that can be represented as $x_{1}, x_{2}, x_{3}, ..., x_{n}$, the weights as $w$ that can be represented as $w_{1}, w_{2}, w_{3}, ..., w_{n}$, and the bias as $b$, we can call the transfer function as $v = \sum_{i=1}^{n} w_{i}x_{i} + b$ which is the seighted sum of inputs plus the bias before introducing the activation function. Next we go to a activation function, which each problem has it own function. The most common activation function is the sigmoid function. The sigmoid function is represented as $\phi(x) = \frac{1}{1 + e^{-v}}$. The output of the perceptron is the result of the activation function. The output can be represented as $y = \phi(v)$.
+As metioned before, the perceptron has only a single layer. It can have multiple inputs and outputs. Those inputs are connected to the output by synapses. Each synapse has it own weight and can have a bias. Also all inputs are connected to a single neuron. Calling the inputs as $x$ that can be represented as $x_{1}, x_{2}, x_{3}, ..., x_{n}$, the weights as $w$ that can be represented as $w_{1}, w_{2}, w_{3}, ..., w_{n}$, and the bias as $b$, we can call the transfer function as $v = \sum_{i=1}^{n} w_{i}x_{i} + b$ which is the seighted sum of inputs plus the bias. Next we go to a activation function, which each problem has it own function. The most common activation function is the sigmoid function. The sigmoid function is represented as $\phi(x) = \frac{1}{1 + e^{-v}}$. The output of the perceptron is the result of the activation function. The output can be represented as $y = \phi(v)$.
 
 ![Perceptron Structure](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/4.avif)
 
-The image above show us the structure of a perceptron. The inputs goes from the range of $x_{1}, x_{2}, x_{3}, ..., x_{n}$, and the weights goes from the range of $w_{1}, w_{2}, w_{3}, ..., w_{n}$. The output is the result of the activation function. The image show us a perceptron with a single output. However we can have $n$ outputs.
+The image above show us the structure of a perceptron. The inputs goes from the range of $x_{1}, x_{2}, x_{3}, ..., x_{n}$, and the weights goes from the range of $w_{1}, w_{2}, w_{3}, ..., w_{n}$. The output is the result of the activation function.
 
 ### Perceptron Learning Algorithm 
 
@@ -381,3 +381,145 @@ The mean error for all neurons in output layer is calculated as $E = \frac{1}{n}
 The mean error for all training data is calculated as $E = \frac{1}{n}\sum_{i=1}^{n} |E(T)|$. Where:
 
 This value can be used to stop the training process.
+
+### Example 1
+
+In this example, the perceptron will have two input sign and one output. This net after the train will be able to do a binary classification for four individuals. The individuals and the class are:
+
+- Bach: Compositor
+
+- Beethoven: Compositor
+
+- Einstein: Scientist
+
+- Kepler: Scientist
+
+The next step is to codify the data. The data can be codified as:
+
+| Individual | Input 1 | Input 2 |
+|------------|---------|---------|
+| Bach       | 0       | 0       |
+| Beethoven  | 0       | 1       |
+| Einstein   | 1       | 0       |
+| Kepler     | 1       | 1       |
+
+We are also going to use the bias.
+
+After those considerations we can track the net, initial we will consider the synapses as 0 and also the bias.
+
+![Simples perceptron](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/simple_perceptron.png)
+
+The first entry is for KEPLER (1 1), however the output is 0, which means that the net is returning a compositor.
+
+The bias is adjusted to 1, and the calculation for the activation function is defined like: $v = \sum_{i=1}^{n} w_{i}x_{i} + b$. The output is 1, which means that the net is returning a scientist. So:
+
+$v = 0 * 1 + 0 * 1 + 0*1 = 0$
+
+The transferer function has the following value: 
+$$
+\phi(v) = 
+\begin{cases} 
+1, & \text{se } v > 0 \\
+0, & \text{se } v \leq 0 
+\end{cases}
+$$ 
+
+$v \leq 0$, $\phi = 0$. So the net is returning a compositor.
+
+The output isn't correct and comparing it with the desire output we have an error. The error is calculated by: $E = 1 - 0 = 1$.
+
+Defining arbitrary a learning ratio $n = 1$ the adjust of weights and bias will be:
+
+$w(i)_{T+1} = w(i)_{T} +nE_{T} x(i)$
+
+The new weights will be:
+
+$w_{1} = 0 + 1 * 1 * 1 = 1$
+
+$w_{2} = 0 + 1 * 1 * 1 = 1$
+
+$b = 0 + 1 * 1 = 1$
+
+So the new neural after the first train will be:
+
+![Perceptron after first train](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/perceptron%20after%20first%20train.png)
+
+Now we are consider the input (0 1) for BEETHOVEN. The sum of weights is $2$, and after the transfer function is $1$. The output is $1$, which means that the net is returning a scientist. The desire output is $0$, and the error is $-1$. The new weights and bias are:
+
+$w_{1} = 1+1*(-1)*0 = 1$
+
+$w_{2} = 1+1*(-1)*1 = 0$
+
+$b = 1 + 1 * (-1) * 1 = 0$
+
+Now we are going to send (1 0) to net.
+
+![Einsten input](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/sign_for_einsten.png)
+
+Now adjusting the weights we discover that the error is now define $E = 1-1 = 0$
+
+$w_{1} = 1+1*(0)*1= 1$
+
+$w_{2} = 0 + 1*(0)*1 = 0$
+
+There's no adjust in the net, so trying a new input (0 0) we discover that will be no adjust in the net again. So our net is trained and ready.
+
+### Example 2
+
+Now in this example will have two entry and two outputs. The goal is:
+
+- Einstein: 0 1 1 0
+
+- Machado de Assis: 1 0 1 0
+
+- Raquel de Queiroz: 1 0 0 1
+
+- Marie Curie: 0 1 0 1
+
+We can codify in this way: Einstein = 11; Machado de Assis = 10; Raquel de Queiroz = 00; Marie Curie = 01; Autor = 0; Cientist = 1 ; Man = 0; Woman = 1
+
+In this way we are going to use two elements in entry and two neurons in output. Also a bias have value $1$. Learning Ratio is defined, $n=1$
+
+![Two outputs](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/two_outputs_perceptron.png)
+
+We start the train of this net showing the sign (0 1) for Marie Curie. THe output will be (0 0).
+
+$v_{1} = 0 * 1 + 0 * 0 + 0 * 1= 0$
+
+$v_{2} = 0 * 1 + 0 * 0 + 0 * 1 = 0$
+
+The transfer function, which is the same as the previous example, will return $0$ for all neurons. WOMEN is defined as $1$ and CIENTIST as $1$, so the error is $1$ for both neurons. The new weights and bias are:
+
+$w_{11} = 0 +1 *1 *0 = 0$
+
+$w_{12} = 0 +1 *1 *0 = 0$
+
+$w_{21} = 0 +1 *1 *1 = 1$
+
+$w_{22} = 0 +1 *1 *1 = 1$
+
+$b_{1} = 1 + 1 * 1 * 0 = 1$
+
+$b_{2} = 1 + 1 * 1 * 1 = 1$
+
+After the trains the net will be:
+
+- $w_{11} = -2$
+
+- $w_{12} = 0$
+
+- $w_{21} = 1$
+
+- $w_{22} = 1$
+
+- $b_{1} = 1$
+
+- $b_{2} = 0$
+
+### XOR Problem
+
+The XOR problem is a problem that a perceptron with a single layer cannot solve. The perceptron is limited to solving linear problems, and the XOR problem is a non-linear problem. The XOR problem is a problem that requires a multi-layer perceptron to solve.
+
+### C implementation
+
+You can see the C implementation of a perceptron in the file [Perceptron](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/perceptron.c)
