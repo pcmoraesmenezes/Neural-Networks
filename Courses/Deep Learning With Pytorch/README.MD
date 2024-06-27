@@ -83,6 +83,12 @@ Flattening is the process of convert the matrix into a vector.
 
 - [Project 15 - CIFAR-10 Image classification](/Courses/Deep%20Learning%20With%20Pytorch/Project_15.ipynb)
 
+- [Project 16 - Convolutional Neural Network for dog and cat classification](/Courses/Deep%20Learning%20With%20Pytorch/Project_16.ipynb)
+
+- [Project 17 - Classify a homer or bart simpsons with a dense neural network](/Courses/Deep%20Learning%20With%20Pytorch/Project_17.ipynb)
+
+- [Project 18 - Convolutional Neural Network for homer and bart simpsons classification](/Courses/Deep%20Learning%20With%20Pytorch/Project_18.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
