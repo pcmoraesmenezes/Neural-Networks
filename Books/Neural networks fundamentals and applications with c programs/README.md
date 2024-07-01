@@ -523,3 +523,35 @@ The XOR problem is a problem that a perceptron with a single layer cannot solve.
 ### C implementation
 
 You can see the C implementation of a perceptron in the file [Perceptron](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/perceptron.c)
+
+### Exercises
+
+1. Describe the working of a perceptron, your's advantages and limitations.
+
+2. What is the delta rule?
+
+3. Why xor problem cannot be solved by a perceptron?
+
+4. Describes the steps to train a perceptron.
+
+5. Using the C implementation build a perceptron with 6 inputs and 4 outputs.
+
+6. Using the C implementation to build a perceptron to generate a truth table with 8 inputs for AND, OR and NAND
+
+7. In a collection of 6 books, 4 are about engineering and 2 about literature, 3 of the engineering books and 1 of the literature books are written by mann, the other books are written by woman. Create a perceptron to classify the books.
+
+### Answers
+
+1. The perceptron is the most simple neural network. It's a single layer network, and it's used to solve linear problems. The perceptron is a feedforward network and it's not capable to solve non linear problems. The advantages of the perceptron are its simplicity and lower computational cost. The limitations of the perceptron are its inability to solve non-linear problems and its inability to solve the XOR problem.
+
+2. The delta rule is a learning algorithm used to adjust the weights of a perceptron to minimize the error. The delta rule adjusts the weights proportionally to the error and the sign value.
+
+3. The XOR problem cannot be solved by a perceptron because the perceptron is limited to solving linear problems, and the XOR problem is a non-linear problem. The XOR problem requires a multi-layer perceptron to solve.
+
+4. The steps to train a perceptron are: initialize the weights and the bias, calculate the net sum, calculate the output, calculate the error, adjust the weights and the bias, repeat the process until the error is acceptable.
+
+5. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/exercise_5.c)
+
+6. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/exercise_6.c)
+
+7. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/exercise_7.c)
