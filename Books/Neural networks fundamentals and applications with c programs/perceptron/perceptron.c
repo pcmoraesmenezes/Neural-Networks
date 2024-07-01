@@ -41,7 +41,6 @@ int main() {
     float w[ENTRY][OUTPUT], error[OUTPUT], ni[OUTPUT], bias, eta, entrys[IN][ENTRY-1], outputs[IN][OUTPUT], phi[OUTPUT];
     float err, errorm;
     int epochs, function;
-    char proceed = 'y';
 
     clrscr();
 
@@ -78,7 +77,7 @@ int main() {
 
     int cont = 0;
     int testerror = 0;
-    while (cont < epochs && !testerror && proceed != 'n') {
+    while (cont < epochs && !testerror) {
         clrscr();
         cont++;
 
@@ -121,9 +120,7 @@ int main() {
             }
         }
 
-        printf("Continue? (y/n): ");
-        getchar();
-        scanf("%c", &proceed);
+
     }
 
     printf("Done!\n");
