@@ -89,6 +89,10 @@ Flattening is the process of convert the matrix into a vector.
 
 - [Project 18 - Convolutional Neural Network for homer and bart simpsons classification](/Courses/Deep%20Learning%20With%20Pytorch/Project_18.ipynb)
 
+### Autoencoders 🎯
+
+- [Project 19 - Image compaction with autoencoders](/Courses/Deep%20Learning%20With%20Pytorch/Project_19.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
