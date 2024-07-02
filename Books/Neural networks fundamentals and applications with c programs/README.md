@@ -555,3 +555,17 @@ You can see the C implementation of a perceptron in the file [Perceptron](/Books
 6. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/exercise_6.c)
 
 7. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/perceptron/exercise_7.c)
+
+## Chapter 5 - Multi Layer Perceptron
+
+Due the limitations of perceptron it was necessary to introduce layers in the network. Those layers primarily are based on human brain. This layers are responsible to solve non-linear problems.
+
+### Description
+
+Multi Layer Perceptron (MLP) is a net with one or more hidden layers. It has $i$ entrys and $j$ outputs. The net is feedforward. MLP is a generalization of a perceptron and the training is made by supervisioned algorithm. The learning algorithm is know as backpropagation.
+
+![MLP](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Images/Example-multilayer-perceptron-MLP-model-of-a-multi-classification-artificial-neural.png)
+
+The MLP sign propagation works as a perceptron.
+
+### Backpropagation Algorithm
