@@ -93,6 +93,10 @@ Flattening is the process of convert the matrix into a vector.
 
 - [Project 19 - Image compaction with autoencoders](/Courses/Deep%20Learning%20With%20Pytorch/Project_19.ipynb)
 
+- [Project 20: Classification with autoencoders](/Courses/Deep%20Learning%20With%20Pytorch/Project_20.ipynb)
+
+- [Project 21: Image compression with deep autoencoders](/Courses/Deep%20Learning%20With%20Pytorch/Project_21.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
