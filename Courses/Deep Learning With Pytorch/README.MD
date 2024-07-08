@@ -101,6 +101,10 @@ Flattening is the process of convert the matrix into a vector.
 
 - [Project 23: Deep autoencoders with cifar-10 dataset](/Courses/Deep%20Learning%20With%20Pytorch/Project_23.ipynb)
 
+### Generative Adversarial Networks 
+
+- [Project 24: Generate new images using MNIST dataset (Fully connected)](/Courses/Deep%20Learning%20With%20Pytorch/Project_24.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
