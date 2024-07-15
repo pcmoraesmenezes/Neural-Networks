@@ -419,8 +419,8 @@ The transferer function has the following value:
 $$
 \phi(v) = 
 \begin{cases} 
-1, & \text{se } v > 0 \\
-0, & \text{se } v \leq 0 
+1, & \text{if } v > 0 \\
+0, & \text{if } v \leq 0 
 \end{cases}
 $$ 
 
@@ -569,3 +569,38 @@ Multi Layer Perceptron (MLP) is a net with one or more hidden layers. It has $i$
 The MLP sign propagation works as a perceptron.
 
 ### Backpropagation Algorithm
+
+You can find the explanation to this algorithm [Here](https://github.com/pcmoraesmenezes/Calculo/blob/main/Explica%C3%A7%C3%A3o%20de%20Algoritmo/Backpropagation.md)
+
+### C implementation
+
+You can see the C implementation of a perceptron in the file [Perceptron](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/main.c)
+
+### Exercises
+
+1. Describe the backpropagation algorithm.
+
+2. Describe the steps of a mlp train
+
+3. Using the C implementation solve the XOR problem
+
+4. Add the momentum to the C implementation
+
+5. Consider those functions: $y = 3x + z$ and $y = 5x² - z$. Create a MLP to solve this problem.
+
+6. Find the numerical results for the functions $y = \sqrt{x}$ and $y = x³$. Create a MLP to solve this problem.
+
+### Answers
+
+1. The backpropagation algorithm is a learning algorithm used to adjust the weights of a multi-layer perceptron to minimize the error. The backpropagation algorithm adjusts the weights by propagating the error backwards through the network.
+
+2. The steps of a MLP train are: initialize the weights and the bias, calculate the net sum, calculate the output, calculate the error, adjust the weights and the bias, repeat the process until the error is acceptable.
+
+3. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/xor.c)
+
+4. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/momentum.c)
+
+5. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/5.c)
+
+6. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/6.c)
+
