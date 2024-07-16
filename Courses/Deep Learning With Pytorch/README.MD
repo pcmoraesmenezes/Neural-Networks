@@ -105,6 +105,16 @@ Flattening is the process of convert the matrix into a vector.
 
 - [Project 24: Generate new images using MNIST dataset (Fully connected)](/Courses/Deep%20Learning%20With%20Pytorch/Project_24.ipynb)
 
+### Recurrent Neural Networks
+
+- [Project 25: Petrobras stock prediction using 1 input](/Courses/Deep%20Learning%20With%20Pytorch/Project_25.ipynb)
+
+- [Project 26: Petrobras stock prediction using multiple entrys](/Courses/Deep%20Learning%20With%20Pytorch/Project_26.ipynb)
+
+- [Project 27: Petrobras stock prediction usign multiple outputs](/Courses/Deep%20Learning%20With%20Pytorch/Project_27.ipynb)
+
+- [Project 28: China air polution prediction](/Courses/Deep%20Learning%20With%20Pytorch/Project_28.ipynb)
+
 ## Additional Information ℹ️
 
 You can find the datasets and weights in the directory `Datasets` and `Weights` respectively.
