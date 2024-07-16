@@ -604,3 +604,44 @@ You can see the C implementation of a perceptron in the file [Perceptron](/Books
 
 6. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/MLP/6.c)
 
+## Chapter 6 - Konohen Network
+
+New type of learning proccess called competitive learning. Is also know as self-organizing map. This network aims to reduce the dimensionality of the data.
+
+### Description
+
+The Konohen network is a unsupervised learning network that is also a self-organizing map. The concept of a competitive is related to: Based on the input value the neurons compete with each other and the neuron who wons has the weight adjusted. Also, the neurons that are close to the winner neuron have the weight adjusted too. This network is also a feedforward network.
+
+### Net Algorithm
+
+You can find the explanation to this algorithm [Here](https://github.com/pcmoraesmenezes/Calculo/blob/main/Explica%C3%A7%C3%A3o%20de%20Algoritmo/Konohen's%20net.md)
+
+
+### C implementation
+
+You can see the C implementation of a perceptron in the file [Konohen](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Konohen/main.c)
+
+### Exercises
+
+1. Describe the principle of konohe's net use, and explain how it's done the test.
+
+2. What's is a winner neuron?
+
+3. Describe the cooperative learning and adaptive learning.
+
+4. Make a konohen's net to verify based on three input which number class belongs.
+
+5. Modify the konoken's net to the neuron be activity from two inputs, defined by the function y = x+1 and y = 2x
+
+### Answers
+
+1. The principle of Konohen's net is to reduce the dimensionality of the data. The test is done by presenting the input data to the network and observing the output data.
+
+2. The winner neuron is the neuron that wins the competition in a Konohen network. The winner neuron has the weight adjusted.
+
+3. Cooperative learning is a type of learning in which the neurons in a Konohen network compete with each other to win the competition. Adaptive learning is a type of learning in which the weights of the neurons in a Konohen network are adjusted based on the input data.
+
+4. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Konohen/4.c)
+
+5. The solution can be found [Here](/Books/Neural%20networks%20fundamentals%20and%20applications%20with%20c%20programs/Konohen/5.c)
+
